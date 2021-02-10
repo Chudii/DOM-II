@@ -2,8 +2,9 @@
 
 // #1
 let heading = document.querySelector('.logo-heading');
-heading.addEventListener('dblclick',(event) => {
+heading.addEventListener('click',(event) => {
     event.target.style.color = 'navy';
+    event.stopPropagation();
 })
 
 // #2
@@ -23,4 +24,14 @@ headerColorBack.addEventListener('mouseleave', (event) => {
 })
 
 // #4
+let topImg = document.querySelector('img');
+topImg.addEventListener('load', (event) => {
+    event.target.style.borderRadius =  '30px';
+})
+
+// #5
+let container = document.querySelector('.container');
+window.addEventListener('scroll', (event) => {
+    event.target.style.backgroundColor = 'gray';
+}) 
 
